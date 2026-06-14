@@ -1,4 +1,4 @@
-// ═══════════════════════════════════════════════════════════════════
+﻿// ═══════════════════════════════════════════════════════════════════
 // Site Configuration — Location Voitures Tunisie
 // Domain: locationvoitures-tunisie.com | FR | National
 // ═══════════════════════════════════════════════════════════════════
@@ -182,6 +182,8 @@ export const siteConfig = {
     },
 
     theme: {
+        heroVariant: "overlay",   // "overlay" | "split"
+        cardVariant: "default",   // "default" | "outlined"
         primary: "#00256f",
         primaryContainer: "#1a3c8f",
         primaryFixed: "#dbe1ff",

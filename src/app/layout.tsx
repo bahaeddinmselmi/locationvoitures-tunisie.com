@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Manrope, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
@@ -89,7 +89,17 @@ export default async function RootLayout({
     return (
         <html lang={siteConfig.lang} suppressHydrationWarning>
             <head>
-                {/* Preconnect to Google Fonts for faster loading */}
+                {/* Site brand CSS variables — drives all themed colors */}
+                <style>{`
+                    :root {
+                        --site-primary: ${siteConfig.theme.primary};
+                        --site-primary-dark: ${siteConfig.theme.primaryContainer};
+                        --site-accent: ${siteConfig.theme.accent};
+                        --site-footer-bg: ${siteConfig.theme.footerBg};
+                        --site-icon-tint: ${siteConfig.theme.onPrimaryContainer};
+                    }
+                `}</style>
+                {/* Preconnect to Google Fonts for faster loading */} for faster loading */}
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
                 {/* Material Symbols for icons — loaded async to avoid render-blocking */}
